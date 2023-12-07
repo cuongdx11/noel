@@ -1,0 +1,56 @@
+/* public/styles.css */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('../images/back.gif');
+    background-size: cover;
+    background-position: center;
+}
+
+div {
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+#timer-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px; /* Điều chỉnh chiều rộng theo ý muốn */
+    height: 70px;
+    background-color: #d79393;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px; /* Bo tròn các góc */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển đổi màu nền */
+}
+
+#timer-container:hover {
+    background-color: #2e6bd4; /* Màu khi di chuột qua */
+}
+
+#rectangle {
+    width: 20px;
+    height: 50px;
+    background-color: #fff;
+    margin-right: 10px;
+    border-radius: 5px; /* Bo tròn các góc */
+}
+
+#timer {
+    font-size: 24px;
+}
+
+/* Optional: Style the countdown when it reaches zero */
+#timer:empty::before {
+    content: "Đã đến Giáng sinh!";
+}
