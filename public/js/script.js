@@ -31,3 +31,37 @@ document.addEventListener("DOMContentLoaded", function () {
     // Gọi hàm một lần để cập nhật ngay khi trang được tải
     updateCountdown();
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    var rectangle = document.getElementById("rectangle");
+    var prayerContainer = document.getElementById("prayer-container");
+    var closeBtn = document.getElementById("close-btn");
+    var isOpen = false; // Biến flag để kiểm soát trạng thái hiển thị của ô nhập
+
+    // Ẩn ô nhập điều ước khi trang được tải
+    prayerContainer.style.display = "none";
+
+    // Thêm sự kiện click cho phần tử rectangle khi người dùng click vào trang
+    document.addEventListener("click", function () {
+        if (!isOpen) {
+            prayerContainer.style.display = "flex";
+            isOpen = true;
+        }
+    });
+
+    // Thêm sự kiện click cho nút đóng
+    closeBtn.addEventListener("click", function (event) {
+        event.stopPropagation(); // Ngăn chặn sự kiện click lan ra các phần tử cha
+        prayerContainer.style.display = "none";
+        isOpen = false;
+    });
+});
+
+
+function sendPrayer() {
+    var prayerText = document.getElementById("prayer-text").value;
+    // Xử lý nút "Gửi đi" theo nhu cầu của bạn
+    // Ví dụ: Gửi dữ liệu đi qua AJAX hoặc thực hiện các tác vụ khác
+    console.log("Đã nhận được điều cầu nguyện:", prayerText);
+}

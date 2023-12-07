@@ -1,4 +1,3 @@
-<!-- public/index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,10 +8,25 @@
 </head>
 <body>
     <div id="timer-container">
-        <div id="rectangle"></div>
+        <!-- <div id="rectangle"></div> -->
         <div id="timer">00:00:00</div>
     </div>
-
+    <div>
+        <img id="onggia" src="/images/onggia.jpg" alt="Ông già Noel">
+    </div>
+    <div>
+        <img id="thong" src="/images/thong1.gif" alt="Cây thông Noel">
+    </div>
+    <div id="rectangle">Cầu nguyện</div>
+    <div id="prayer-container">
+        <div id="prayer-box">
+            <span id="close-btn">&times;</span>
+            <h3>Nhập điều cầu nguyện</h3>
+            <textarea id="prayer-text" rows="4" cols="50" placeholder="Nhập điều cầu của bạn"></textarea>
+            <br>
+            <button id="send-prayer-btn">Gửi đi</button>
+        </div>
+    </div>
     <script src="js/script.js"></script>
 </body>
 </html>

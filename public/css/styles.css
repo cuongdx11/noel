@@ -39,13 +39,18 @@ img {
 }
 
 #rectangle {
-    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
     height: 50px;
-    background-color: #fff;
+    background-color: #d79393; /* Thay đổi màu sắc mong muốn */
     margin-right: 10px;
-    border-radius: 5px; /* Bo tròn các góc */
-}
-
+    border-radius: 5px;
+    position: absolute;
+    bottom: 70px; /* Đặt phần tử ở phía dưới cùng của màn hình */
+    left: 50%; /* Đặt phần tử ở giữa màn hình */
+    transform: translateX(-50%); /* Dịch chuyển theo chiều ngang để căn giữa */}
 #timer {
     font-size: 24px;
 }
@@ -53,4 +58,59 @@ img {
 /* Optional: Style the countdown when it reaches zero */
 #timer:empty::before {
     content: "Đã đến Giáng sinh!";
+}
+
+#onggia {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px; /* Thay đổi giá trị này thành kích thước mong muốn */
+    height: auto; /* Giữ tỷ lệ khung hình */
+}
+
+#prayer-container {
+    display: none;
+    position: fixed; /* Sử dụng 'fixed' thay vì 'absolute' để giữ nó cố định trên màn hình */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#prayer-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-height: 80vh; /* Giới hạn chiều cao tối đa của ô nhập */
+    overflow-y: auto; /* Hiển thị thanh cuộn nếu chiều cao vượt quá max-height */
+    position: relative;
+}
+
+#close-btn {
+    cursor: pointer;
+    color: red;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#send-prayer-btn {
+    background-color: #4CAF50; /* Màu nền xanh lá cây */
+    color: white; /* Màu chữ trắng */
+    padding: 10px 20px; /* Kích thước độ lớn của nút */
+    font-size: 16px; /* Kích thước chữ */
+    border: none; /* Không có viền */
+    border-radius: 5px; /* Bo tròn góc */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Hiệu ứng chuyển đổi màu nền */
+}
+
+#send-prayer-btn:hover {
+    background-color: #45a049; /* Màu nền xanh lá cây khi di chuột qua */
 }
